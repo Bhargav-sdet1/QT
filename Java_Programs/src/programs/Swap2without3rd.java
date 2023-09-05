@@ -1,4 +1,4 @@
-package pack1;
+package programs;
 
 public class Swap2without3rd {
 
