@@ -63,7 +63,23 @@ public class LetsKodeItPractice {
 		disblebtn.click();
 		System.out.println(enableTextField.isEnabled());
 		
+		//Element Displayed Example and verify is displayed
+		WebElement showBtn= driver.findElement(By.xpath("//input[@id='show-textbox']"));
+		showBtn.click();
+		WebElement showtextField=driver.findElement(By.xpath("//input[@id='displayed-text']"));
+		boolean showField=showtextField.isDisplayed();
+		System.out.println(showField);
+		if(showField==true)
+		{
+			showtextField.sendKeys("In Show field");
+		}
 		
+		//Click on Hide and verify isDisplayed->false
+		WebElement hideBtn= driver.findElement(By.xpath("//input[@id='hide-textbox']"));
+		hideBtn.click();
+		
+		showField=showtextField.isDisplayed();
+		System.out.println(showField);
 		
 		
 		
