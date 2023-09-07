@@ -1,16 +1,20 @@
 package javaPack;
 
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class LetsKodeItPractice {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver = new ChromeDriver();
 		
@@ -81,12 +85,63 @@ public class LetsKodeItPractice {
 		showField=showtextField.isDisplayed();
 		System.out.println(showField);
 		
+		//Alert
+		WebElement alertText=driver.findElement(By.xpath("//input[@name='enter-name']"));
+		alertText.sendKeys("Bhargav");
+		//On click alert
+		driver.findElement(By.xpath("//input[@id='alertbtn']")).click();
+		System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().accept();
 		
 		
+		//On click Confirm alert and cancel
+		alertText.sendKeys("Bhargav Ram");
+		driver.findElement(By.xpath("//input[@id='confirmbtn']")).click();
+		System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().dismiss();
 		
+		WebElement hoverEle=driver.findElement(By.xpath("//button[@id='mousehover']"));
+		//Scroll to a element
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true)", hoverEle);
 		
-		
+		//Mousehover Example
+		Actions actions = new Actions(driver);						
+		actions.moveToElement(hoverEle).build().perform();
 
+		//Selecting Top
+		driver.findElement(By.xpath("//div[@class='mouse-hover-content']//a[text()='Top']")).click();
+		Thread.sleep(2000);
+		
+		//Switch Tab Example
+
+		driver.findElement(By.xpath("//a[@id='opentab']")).click();		
+		Set<String> winHandles=driver.getWindowHandles();
+		System.out.println(winHandles);
+		Iterator<String> it=winHandles.iterator();
+		String parentWin=it.next();
+		String childWin=it.next();
+		
+		driver.switchTo().window(childWin);
+		driver.findElement(By.xpath("//div/a[text()='Sign In']")).click();
+		Thread.sleep(2000);
+		driver.close();
+		driver.switchTo().window(parentWin);
+		
+		//Switch Window Example
+
+		driver.findElement(By.xpath("//*[@id='openwindow']")).click();
+		winHandles=driver.getWindowHandles();
+		Iterator<String> it2=winHandles.iterator();
+		System.out.println(winHandles);
+		String parentWin2=it2.next();
+		String childWin2=it2.next();
+		Thread.sleep(2000);
+		driver.switchTo().window(childWin2);
+		driver.findElement(By.xpath("//div/a[text()='Sign In']")).click();
+		Thread.sleep(2000);
+		driver.close();
+		driver.switchTo().window(parentWin2);
 	}
 
 }
