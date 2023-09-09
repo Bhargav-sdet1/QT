@@ -142,6 +142,19 @@ public class LetsKodeItPractice {
 		Thread.sleep(2000);
 		driver.close();
 		driver.switchTo().window(parentWin2);
+		
+		//Scroll to WebTable
+		WebElement webTable=driver.findElement(By.xpath("//div[@id='table-example-div']//legend"));
+		JavascriptExecutor js2=(JavascriptExecutor) driver;
+		js2.executeScript("arguments[0].scrollIntoView(true)", webTable);
+		
+		//print firstcourse name
+		WebElement firstCourse=driver.findElement(By.xpath("//table[@id='product']//tr[2]//td[2]"));
+		System.out.println(firstCourse.getText());
+		
+		
+		
+		
 	}
 
 }
