@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-09T16:16:39 IST" name="Default suite" finished-at="2023-09-09T16:16:47 IST" duration-ms="8424">
+  <suite started-at="2023-09-14T21:50:58 IST" name="Default suite" finished-at="2023-09-14T21:51:07 IST" duration-ms="8217">
     <groups>
     </groups>
-    <test started-at="2023-09-09T16:16:39 IST" name="Default test" finished-at="2023-09-09T16:16:47 IST" duration-ms="8424">
-      <class name="javaPack.FacebookPractice">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:javaPack.FacebookPractice@28261e8e]" started-at="2023-09-09T16:16:39 IST" name="setUp" finished-at="2023-09-09T16:16:43 IST" duration-ms="4224" status="PASS">
+    <test started-at="2023-09-14T21:50:58 IST" name="Default test" finished-at="2023-09-14T21:51:07 IST" duration-ms="8217">
+      <class name="javaPack.SBICSS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:javaPack.SBICSS@28261e8e]" started-at="2023-09-14T21:50:58 IST" name="setUp" finished-at="2023-09-14T21:51:02 IST" duration-ms="3573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="selectMonth()[pri:0, instance:javaPack.FacebookPractice@28261e8e]" started-at="2023-09-09T16:16:43 IST" name="selectMonth" finished-at="2023-09-09T16:16:47 IST" duration-ms="4068" status="PASS">
+        <test-method signature="cssSelector()[pri:0, instance:javaPack.SBICSS@28261e8e]" started-at="2023-09-14T21:51:02 IST" name="cssSelector" finished-at="2023-09-14T21:51:06 IST" duration-ms="4293" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectMonth -->
-      </class> <!-- javaPack.FacebookPractice -->
+        </test-method> <!-- cssSelector -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:javaPack.SBICSS@28261e8e]" started-at="2023-09-14T21:51:06 IST" name="tearDown" finished-at="2023-09-14T21:51:07 IST" duration-ms="287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- javaPack.SBICSS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
