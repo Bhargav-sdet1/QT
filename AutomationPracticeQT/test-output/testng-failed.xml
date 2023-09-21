@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="javaPack.MouseActions">
+      <class name="javaPack.DropdownSelection">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
           <include name="cssSelector"/>
         </methods>
-      </class> <!-- javaPack.MouseActions -->
+      </class> <!-- javaPack.DropdownSelection -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
