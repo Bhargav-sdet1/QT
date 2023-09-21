@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="javaPack.DropdownSelection">
+      <class name="javaPack.CyclosLogin">
         <methods>
+          <include name="cssSelector"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="cssSelector"/>
         </methods>
-      </class> <!-- javaPack.DropdownSelection -->
+      </class> <!-- javaPack.CyclosLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
