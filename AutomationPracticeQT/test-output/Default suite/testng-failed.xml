@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="javaPack.CyclosLogin">
+      <class name="javaPack.MuseLogin">
         <methods>
-          <include name="cssSelector"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="museLogin"/>
         </methods>
-      </class> <!-- javaPack.CyclosLogin -->
+      </class> <!-- javaPack.MuseLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

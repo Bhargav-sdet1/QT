@@ -33,14 +33,14 @@ public class CyclosLogin {
 		// Click Submit
 		driver.findElement(By.xpath("//button[@type='button']//span")).click();
 		
-		//if user given empty uname and pwd
+		//if user given empty UName and password
 		if (givenuname.equals("") && givenpassword.equals("")) {
 			assertEquals(driver.findElement(By.cssSelector(".principal .invalid-feedback")).getText(),
 					"This field is required");
 			assertEquals(driver.findElement(By.cssSelector(".d-block .invalid-feedback")).getText(),
 					"This field is required");
 		}
-		//if user given empty pwd
+		//if user given empty password
 		else if (!(givenuname.equals("")) && givenpassword.equals("")) {
 					/*assertEquals(driver.findElement(By.cssSelector(".principal .invalid-feedback")).getText(),
 							"This field is required");*/

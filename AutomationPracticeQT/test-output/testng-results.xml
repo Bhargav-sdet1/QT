@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-22T07:58:19 IST" name="Default suite" finished-at="2023-09-22T07:58:30 IST" duration-ms="10537">
+  <suite started-at="2023-09-22T17:21:17 IST" name="Default suite" finished-at="2023-09-22T17:21:33 IST" duration-ms="16091">
     <groups>
     </groups>
-    <test started-at="2023-09-22T07:58:19 IST" name="Default test" finished-at="2023-09-22T07:58:30 IST" duration-ms="10537">
-      <class name="javaPack.CyclosLogin">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:javaPack.CyclosLogin@25be7b63]" started-at="2023-09-22T07:58:19 IST" name="setUp" finished-at="2023-09-22T07:58:23 IST" duration-ms="3266" status="PASS">
+    <test started-at="2023-09-22T17:21:17 IST" name="Default test" finished-at="2023-09-22T17:21:33 IST" duration-ms="16091">
+      <class name="javaPack.MuseLogin">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:javaPack.MuseLogin@2a693f59]" started-at="2023-09-22T17:21:17 IST" name="setUp" finished-at="2023-09-22T17:21:19 IST" duration-ms="2118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="cssSelector()[pri:0, instance:javaPack.CyclosLogin@25be7b63]" started-at="2023-09-22T07:58:23 IST" name="cssSelector" finished-at="2023-09-22T07:58:30 IST" duration-ms="6977" status="PASS">
+        <test-method signature="museLogin()[pri:0, instance:javaPack.MuseLogin@2a693f59]" started-at="2023-09-22T17:21:19 IST" name="museLogin" finished-at="2023-09-22T17:21:33 IST" duration-ms="13921" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cssSelector -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:javaPack.CyclosLogin@25be7b63]" started-at="2023-09-22T07:58:30 IST" name="tearDown" finished-at="2023-09-22T07:58:30 IST" duration-ms="194" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- javaPack.CyclosLogin -->
+        </test-method> <!-- museLogin -->
+      </class> <!-- javaPack.MuseLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
