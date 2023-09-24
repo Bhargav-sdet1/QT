@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -16,7 +17,7 @@ public class LetsKodeItPractice {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("https://www.letskodeit.com/practice");
 		driver.manage().window().maximize();
@@ -152,7 +153,7 @@ public class LetsKodeItPractice {
 		WebElement firstCourse=driver.findElement(By.xpath("//table[@id='product']//tr[2]//td[2]"));
 		System.out.println(firstCourse.getText());
 		
-		
+		driver.close();
 		
 		
 	}
