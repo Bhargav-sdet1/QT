@@ -23,7 +23,7 @@ public class FacebookPractice {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
-	
+	@Test
 	public void fetchMonths()
 	{
 		driver.get("https://www.facebook.com/");
