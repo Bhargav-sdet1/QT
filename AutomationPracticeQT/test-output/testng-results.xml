@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-25T16:50:23 IST" name="Default suite" finished-at="2023-09-25T16:50:45 IST" duration-ms="21967">
+  <suite started-at="2023-09-26T11:05:05 IST" name="Default suite" finished-at="2023-09-26T11:05:30 IST" duration-ms="24530">
     <groups>
     </groups>
-    <test started-at="2023-09-25T16:50:23 IST" name="Default test" finished-at="2023-09-25T16:50:45 IST" duration-ms="21967">
-      <class name="javaPack.CyclosLoginWriteData">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:javaPack.CyclosLoginWriteData@28dcca0c]" started-at="2023-09-25T16:50:23 IST" name="setUp" finished-at="2023-09-25T16:50:25 IST" duration-ms="2016" status="PASS">
+    <test started-at="2023-09-26T11:05:05 IST" name="Sanity" finished-at="2023-09-26T11:05:30 IST" duration-ms="24530">
+      <class name="javaPack.CyclosLogin">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:javaPack.CyclosLogin@52f27fbd]" started-at="2023-09-26T11:05:05 IST" name="setUp" finished-at="2023-09-26T11:05:10 IST" duration-ms="4943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="cssSelector()[pri:0, instance:javaPack.CyclosLoginWriteData@28dcca0c]" started-at="2023-09-25T16:50:25 IST" name="cssSelector" finished-at="2023-09-25T16:50:45 IST" duration-ms="19807" status="PASS">
+        <test-method signature="cssSelector()[pri:0, instance:javaPack.CyclosLogin@52f27fbd]" started-at="2023-09-26T11:05:10 IST" name="cssSelector" finished-at="2023-09-26T11:05:17 IST" duration-ms="6539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cssSelector -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:javaPack.CyclosLoginWriteData@28dcca0c]" started-at="2023-09-25T16:50:45 IST" name="tearDown" finished-at="2023-09-25T16:50:45 IST" duration-ms="109" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:javaPack.CyclosLogin@52f27fbd]" started-at="2023-09-26T11:05:17 IST" name="tearDown" finished-at="2023-09-26T11:05:17 IST" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- javaPack.CyclosLoginWriteData -->
-    </test> <!-- Default test -->
+      </class> <!-- javaPack.CyclosLogin -->
+      <class name="javaPack.CyclosQR">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:javaPack.CyclosQR@70cf32e3]" started-at="2023-09-26T11:05:17 IST" name="setUp" finished-at="2023-09-26T11:05:21 IST" duration-ms="3866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="QR()[pri:0, instance:javaPack.CyclosQR@70cf32e3]" started-at="2023-09-26T11:05:21 IST" name="QR" finished-at="2023-09-26T11:05:30 IST" duration-ms="8606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QR -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:javaPack.CyclosQR@70cf32e3]" started-at="2023-09-26T11:05:30 IST" name="tearDown" finished-at="2023-09-26T11:05:30 IST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- javaPack.CyclosQR -->
+    </test> <!-- Sanity -->
   </suite> <!-- Default suite -->
 </testng-results>

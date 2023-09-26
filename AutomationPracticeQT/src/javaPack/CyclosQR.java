@@ -20,11 +20,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class CyclosQR {
-	WebDriver driver;
-
+public class CyclosQR extends CyclosBase{
+	
 	@Test
-	public void QR(){
+	public void QR() throws InterruptedException{
 		driver.get("https://demo.cyclos.org/ui/banking/qr");
 		assertTrue(driver.findElement(By.xpath("//a[@class='navbar-brand']")).isDisplayed());
 	
@@ -41,19 +40,13 @@ public class CyclosQR {
 		driver.findElement(By.xpath("//input[@id='id_1']")).sendKeys("10");
 		driver.findElement(By.xpath("//action-button[@class='d-inline-block button']")).click();
 		
+		Thread.sleep(2000);
+		WebElement logout=driver.findElement(By.xpath("//a[@id='logout-trigger']"));
+		
+		//Click logout
+		logout.click();
 		
 
 	}
-	@BeforeTest
-	public void setUp() {
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-	}
-
-	//@AfterTest
-	public void tearDown() throws IOException {
-		driver.close();
-	}
+	
 }

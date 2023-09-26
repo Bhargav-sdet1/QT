@@ -11,10 +11,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class CyclosLogin {
-
-	WebDriver driver;
-
+public class CyclosLogin extends CyclosBase{
+	
 	@Test
 	public void cssSelector() throws InterruptedException {
 		driver.get("https://demo.cyclos.org/ui/home");
@@ -86,17 +84,5 @@ public class CyclosLogin {
 		
 	}
 
-	@BeforeTest
-	public void setUp() {
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-	}
-
-	@AfterTest
-	public void tearDown() {
-		driver.close();
-	}
 
 }

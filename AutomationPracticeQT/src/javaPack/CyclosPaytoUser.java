@@ -57,6 +57,11 @@ public class CyclosPaytoUser {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//action-button//button[@type='button']")).click();
 
+		Thread.sleep(2000);
+		WebElement logout=driver.findElement(By.xpath("//a[@id='logout-trigger']"));
+		
+		//Click logout
+		logout.click();
 	}
 
 	@BeforeTest
@@ -67,7 +72,7 @@ public class CyclosPaytoUser {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 	}
 
-	// @AfterTest
+	//@AfterTest
 	public void tearDown() throws IOException {
 		driver.close();
 	}
