@@ -3,9 +3,11 @@
 
 <suite name="Default suite" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Sanity" verbose="2">
+	  <parameter name="browser" value="FF"></parameter>
     <classes>
       <class name="javaPack.CyclosLogin"/>
       <class name="javaPack.CyclosQR" />
     </classes>
   </test> 
+  
 </suite>

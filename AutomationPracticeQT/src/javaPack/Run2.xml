@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Default suite" guice-stage="DEVELOPMENT" parallel="tests">
+  <test thread-count="5" name="Sanity_Firefox" verbose="2">
+	  <parameter name="browser" value="FF" />
+    <classes>
+      <class name="javaPack.CyclosLogin"/>
+      <class name="javaPack.CyclosQR" />
+    </classes>
+  </test> 
+   <test thread-count="5" name="Sanity_Google" verbose="2">
+	  <parameter name="browser" value="GC" />
+    <classes>
+      <class name="javaPack.CyclosLogin"/>
+      <class name="javaPack.CyclosQR" />
+    </classes>
+  </test> 
+  
+</suite>

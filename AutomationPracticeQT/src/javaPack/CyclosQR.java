@@ -25,7 +25,7 @@ public class CyclosQR extends CyclosBase{
 	@Test
 	public void QR() throws InterruptedException{
 		driver.get("https://demo.cyclos.org/ui/banking/qr");
-		assertTrue(driver.findElement(By.xpath("//a[@class='navbar-brand']")).isDisplayed());
+		assertTrue(driver.findElement(By.xpath("//a[@class='navbar-brand']qwq")).isDisplayed());
 	
 		//Enter UserName
 		WebElement uName = driver.findElement(By.xpath("//input[@autocomplete='username']"));
