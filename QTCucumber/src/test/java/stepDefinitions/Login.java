@@ -54,10 +54,12 @@ public class Login extends Driver{
 		// Click logout
 		boolean logoutStatus = logout.isDisplayed();
 		assertTrue(logoutStatus);
-		/*
-		 * if (logoutStatus == true) logout.click();
-		 */
+		
+		  if (logoutStatus == true)
+			  logout.click();
+		 
 		//Close Browser
+		  
 		Driver.tearDown();
 	}
 }

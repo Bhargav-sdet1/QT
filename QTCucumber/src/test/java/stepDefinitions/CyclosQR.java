@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -46,6 +47,7 @@ public class CyclosQR extends Driver{
 	@When("Enter Amount")
 	public void enter_amount() {
 		driver.findElement(By.xpath("//input[@id='id_1']")).sendKeys("10");
+		//driver.findElement(By.xpath("//input[@id='id_1']")).sendKeys("10", Keys.ENTER);
 	}
 
 	@When("user click on Generate QR Code")
