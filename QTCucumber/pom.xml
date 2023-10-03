@@ -34,46 +34,51 @@
 			<artifactId>cucumber-testng</artifactId>
 			<version>7.14.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.2.4</version>
+		</dependency>
 	</dependencies>
-	 <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
-        <configuration>
-          <includes>
-            <include>TestRunner.java</include>
-          </includes>
-        </configuration>
-        
-      </plugin>
-    <plugin>
-   <groupId>net.masterthought</groupId>
-   <artifactId>maven-cucumber-reporting</artifactId>
-   <version>5.6.0</version>
-   <executions>
-     <execution>
-	<id>execution</id>
-	<phase>verify</phase>
-	<goals>
-	    <goal>generate</goal>
-	</goals>
-	<configuration>		
-	<projectName>Personal Internet Banking</projectName>    
-        <skip>false</skip>		
-        <outputDirectory>C:\Users\bharg\QT-Selenium-Java\QTCucumber\target\report</outputDirectory>	     
-        <inputDirectory>C:\Users\bharg\QT-Selenium-Java\QTCucumber\target\report	</inputDirectory>
-        <jsonFiles>
-          <param>**/*.json</param>
-        </jsonFiles>	
-        <mergeFeaturesById>false</mergeFeaturesById>
-        <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
-        <checkBuildResult>false</checkBuildResult>		    			  
-        </configuration>
-   </execution>
-  </executions>
- </plugin>
- </plugins>
-</build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<includes>
+						<include>TestRunner.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.6.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>Personal Internet Banking</projectName>
+							<skip>false</skip>
+							<outputDirectory>C:\Users\bharg\QT-Selenium-Java\QTCucumber\target\report</outputDirectory>
+							<inputDirectory>C:\Users\bharg\QT-Selenium-Java\QTCucumber\target\report	</inputDirectory>
+							<jsonFiles>
+								<param>**/*.json</param>
+							</jsonFiles>
+							<mergeFeaturesById>false</mergeFeaturesById>
+							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
+							<checkBuildResult>false</checkBuildResult>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

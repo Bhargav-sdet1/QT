@@ -11,18 +11,24 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
 
-public class CyclosQR {
+public class CyclosQR extends Driver{
 
-	WebDriver driver;
-
+	
 	@Given("If user is on home page")
-	public void if_user_is_on_home_page() {
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-		// Load WebPage
-		driver.get("https://demo.cyclos.org/ui/home");
+	public void if_user_is_on_home_page() throws Exception {
+		Driver.LaunchBrowser();
+		
+		// Click login
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@id='login-link']")).click();
+		//Login
+		WebElement uName = driver.findElement(By.xpath("//input[@autocomplete='username']"));
+		uName.sendKeys("demo");
+		// Enter Password
+		WebElement uPassword = driver.findElement(By.xpath("//input[@autocomplete='password']"));
+		uPassword.sendKeys("1234");
+		// Click Submit
+		driver.findElement(By.xpath("//button[@type='button']//span")).click();
 		// Verify Home link
 		assertTrue(driver.findElement(By.xpath("//a[@id='menu_home']")).isDisplayed());
 	}
@@ -43,16 +49,18 @@ public class CyclosQR {
 	}
 
 	@When("user click on Generate QR Code")
-	public void user_click_on_generate_qr_code() {
+	public void user_click_on_generate_qr_code() throws Exception {
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//action-button[@class='d-inline-block button']")).click();
 	}
 
 	@Then("Verify QR code")
-	public void verify_qr_code() {
+	public void verify_qr_code() throws Exception {
+		Thread.sleep(1000);
 		WebElement qrCode = driver.findElement(By.xpath("//receive-qr-payment-step-pending/div/img"));
 		assertTrue(qrCode.isDisplayed());
 		//Close the browser
-		driver.quit();
+		Driver.tearDown();
 	}
 
 }
