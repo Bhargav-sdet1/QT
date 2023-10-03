@@ -39,11 +39,11 @@ public class Login extends Driver{
 	@When("User enters valid Uname and Password")
 	public void user_enters_valid_uname_and_password() throws Exception {
 		WebElement uName = driver.findElement(By.xpath("//input[@autocomplete='username']"));
-		excel=new ExcelUtils("","Sheet1");
-		uName.sendKeys("demo");
+		excel=new ExcelUtils("C:\\Users\\bharg\\Selenium_Script_Sept2023\\Files\\LoginData.xlsx","Sheet1");
+		uName.sendKeys(excel.getCellData(1, 0));
 		// Enter Password
 		WebElement uPassword = driver.findElement(By.xpath("//input[@autocomplete='password']"));
-		uPassword.sendKeys("1234");
+		uPassword.sendKeys(excel.getCellData(1, 1));
 		// Click Submit
 		driver.findElement(By.xpath("//button[@type='button']//span")).click();
 	}
