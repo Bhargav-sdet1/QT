@@ -23,8 +23,8 @@ public class ScreenshotDemo {
 		driver.get("https://www.letskodeit.com/practice");
 		
 		TakesScreenshot ts = (TakesScreenshot)driver;	
-		File targetFile=ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(targetFile, new File("C:\\Users\\bharg\\QT-Selenium-Java\\AutomationPracticeQT\\Screenshots\\abc.png"));
+		File sourceFile=ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(sourceFile, new File("C:\\Users\\bharg\\QT-Selenium-Java\\AutomationPracticeQT\\Screenshots\\abc.png"));
 		Thread.sleep(2000);
 		
 	}
