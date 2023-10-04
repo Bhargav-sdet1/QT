@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginOR {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	
 	@FindBy(xpath="//a[@id='menu_home']") public WebElement HomeIcon;
 	@FindBy(xpath=("//a[@id='login-link']")) public WebElement loginlink;	

@@ -1,12 +1,12 @@
 package stepDefinitions;
 
 import static org.testng.Assert.assertTrue;
-import java.time.Duration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import io.cucumber.java.en.*;
+import config.Driver;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pagesPOM.LoginOR;
 
 public class Login extends Driver{

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import config.Driver;
 import io.cucumber.java.en.*;
 
 public class CyclosQR extends Driver{

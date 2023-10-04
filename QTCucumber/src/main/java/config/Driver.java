@@ -1,4 +1,4 @@
-package stepDefinitions;
+package config;
 
 import java.time.Duration;
 
@@ -8,9 +8,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
-	static WebDriver driver;
-	static String browser ="FF";
-	static String url = "https://demo.cyclos.org/ui/home";
+	public static WebDriver driver;
+	public static String browser ="FF";
+	public static String url = "https://demo.cyclos.org/ui/home";
 	public static void LaunchBrowser()
 	{
 		
