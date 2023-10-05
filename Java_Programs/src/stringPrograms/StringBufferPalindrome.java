@@ -1,4 +1,4 @@
-package programs;
+package stringPrograms;
 
 public class StringBufferPalindrome {
 
