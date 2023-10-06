@@ -8,6 +8,7 @@ public class AtoZAlphabets {
 		for(ch='a';ch<='z';ch++)
 		{
 			System.out.print(ch);
+			System.out.println("Hello");
 		}
 	}
 
