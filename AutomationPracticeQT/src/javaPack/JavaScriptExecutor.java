@@ -21,7 +21,7 @@ public class JavaScriptExecutor {
 		
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		//js.executeScript("arguments[0].click();", login);
+		js.executeScript("arguments[0].click();", login);
 		
 		//js.executeScript("document.getElementById('login').value='Selenium'");
 		
