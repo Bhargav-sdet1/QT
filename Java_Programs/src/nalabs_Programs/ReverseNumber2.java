@@ -1,4 +1,4 @@
-package programs;
+package nalabs_Programs;
 
 public class ReverseNumber2 {
 
@@ -6,13 +6,12 @@ public class ReverseNumber2 {
 		int num =12345;
 		int rev=0;
 		
-		while(num !=0)
+		while(num!=0)
 		{
-			rev= rev*10 + num%10;
+			rev=rev*10+ num%10;
 			num=num/10;
 		}
-
-		System.out.println(rev);
+		System.out.println("Reverse Number is:"+rev);
 	}
 
 }

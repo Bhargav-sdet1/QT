@@ -1,4 +1,4 @@
-package programs;
+package nalabs_Programs;
 
 public class RemoveJunkData {
 
