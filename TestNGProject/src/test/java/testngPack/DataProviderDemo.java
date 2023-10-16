@@ -29,11 +29,9 @@ public class DataProviderDemo {
 		Thread.sleep(3000);
 		// Enter UName
 		WebElement UEmail = driver.findElement(By.xpath("//input[@name='username']"));
-		UEmail.clear();
 		UEmail.sendKeys(Email);
 		// Enter Password
 		WebElement uPassword = driver.findElement(By.xpath("//input[@name='password']"));
-		uPassword.clear();
 		uPassword.sendKeys(Password);
 		// Click Submit
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
@@ -47,7 +45,7 @@ public class DataProviderDemo {
 		driver.quit();
 	}
 	
-	@DataProvider(name="dp", indices= {0,1})
+	@DataProvider(name="dp")
 	Object[][] LoginData()
 	{
 	
