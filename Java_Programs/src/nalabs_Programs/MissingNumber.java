@@ -8,7 +8,7 @@ public class MissingNumber {
 		
 		for(int i=0;i<a.length;i++)
 		{
-			sum = sum+ a[i];
+			sum = sum+a[i];
 		}
 		
 		int sum1=0;
