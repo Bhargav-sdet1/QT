@@ -5,11 +5,11 @@ public class LongNumbersMultiplication {
 	public static void main(String[] args) {
 		//will not give the exact o/p 
 		long longwithoutL=1000*60*60*24*365;
-		System.out.println(longwithoutL);
+		System.out.println(longwithoutL); //1471228928
 		
 		//will give the exact o/p 
 		long longwithL=1000*60*60*24*365L;
-		System.out.println(longwithL);
+		System.out.println(longwithL); //31536000000
 
 	}
 
